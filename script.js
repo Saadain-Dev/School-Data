@@ -16,6 +16,7 @@ inputs.forEach(input => input.addEventListener("input", e => {
 const renderData = () => {
   tbody.innerHTML = tableData.map(item => `
     <tr>
+      <td class="border border-black"></td>
       <td class="border border-black">${item.name}</td>
       <td class="border border-black">${item.fathername}</td>
       <td class="border border-black">${item.class}</td>

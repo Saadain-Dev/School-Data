@@ -16,12 +16,12 @@ inputs.forEach(input => input.addEventListener("input", e => {
 const renderData = () => {
   tbody.innerHTML = tableData.map(item => `
     <tr>
-      <td class="border-2 border-black">${item.name}</td>
-      <td class="border-2 border-black">${item.fathername}</td>
-      <td class="border-2 border-black">${item.class}</td>
-      <td class="border-2 border-black">${item.month}</td>
-      <td class="border-2 border-black">${item.fee}</td>
-      <td class="border-2 border-black py-2">
+      <td class="border border-black">${item.name}</td>
+      <td class="border border-black">${item.fathername}</td>
+      <td class="border border-black">${item.class}</td>
+      <td class="border border-black">${item.month}</td>
+      <td class="border border-black">${item.fee}</td>
+      <td class="border border-black py-2">
         <button class="px-3 py-1 rounded-md bg-red-600 text-white" onclick="deleteRow(${item.id})">
           <i class="fa-solid fa-trash"></i>
         </button>

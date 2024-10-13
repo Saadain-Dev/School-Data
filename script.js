@@ -14,9 +14,9 @@ inputs.forEach(input => input.addEventListener("input", e => {
 }));
 
 const renderData = () => {
-  tbody.innerHTML = tableData.map(item => `
-    <tr>
-      <td class="border border-black"></td>
+  tbody.innerHTML = tableData.map((item, index) =>
+    `<tr>
+      <td class="border border-black">${index + 1}</td> <!-- Adding row number here -->
       <td class="border border-black">${item.name}</td>
       <td class="border border-black">${item.fathername}</td>
       <td class="border border-black">${item.class}</td>
@@ -31,8 +31,7 @@ const renderData = () => {
         </button>
       </td>
     </tr>`).join("");
-  ul.innerHTML = tableData.map(item => `<li>${item.name}</li>`).join("");
-  
+    ul.innerHTML = tableData.map(item => `<li>${item.name}</li>`).join("");
   // Save updated tableData to local storage
   localStorage.setItem("tableData", JSON.stringify(tableData));
 };
